@@ -1,5 +1,6 @@
-
+import {useNavigate} from "react-router-dom";
 const barList = [
+    {name:'介绍',path:'/home'},
     {name:'props 属性传递 Render Props',path:'/props'},
     {name:'PropTypes 的类型检查',path:'/props'},
     {name:'event 事件绑定',path:'/props'},
@@ -20,13 +21,23 @@ const barList = [
     {name:'Effect Hook',path:'/props'},
     {name:'定义的 Hook',path:'/props'},
     {name:'React Router',path:'/props'},
+    {name:'Router 配置',path:'/props'},
+    {name:'Router 传参',path:'/props'},
+    {name:'Router 守卫',path:'/props'},
+    {name:'Router 重定向',path:'/props'},
 
 ]
 
 export default function renderSideBar(){
+    let navigate = useNavigate();
+    const routerSwitch = (path:string) =>{
+        navigate(path)
+    }
     const listItems = barList.map((val)=>{
         return (
-            <li className='mt-3 h-10
+            <li
+                onClick={()=>routerSwitch(val.path)}
+                className='mt-3 h-10
             leading-10 cursor-pointer px-4
              box-border hover:shadow '
                 key={val.name}>
