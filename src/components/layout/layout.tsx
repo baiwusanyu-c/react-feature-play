@@ -6,9 +6,9 @@ function renderLayout() {
     return (
         <div className="w-full h-full">
             <HeaderBar/>
-            <div className='mt-12 flex'>
+            <div className='mt-12 flex mx-16rem'>
                 <SideBar/>
-                <div className='p-10 box-border'>
+                <div className='p-10 box-border w-full h-side overflow-y-auto'>
                     {/*嵌套路由渲染位置*/}
                     {/*<Outlet />*/}
                     {RoutesList()}

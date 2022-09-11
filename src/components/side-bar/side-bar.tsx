@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 const barList = [
     {name:'介绍',path:'/home'},
     {name:'props 属性传递 Render Props',path:'/props'},
-    {name:'PropTypes 的类型检查',path:'/props'},
+    {name:'PropTypes 的类型检查',path:'/propTypes'},
     {name:'event 事件绑定',path:'/props'},
     {name:'state 与 生命周期',path:'/props'},
     {name:'子组件的emit',path:'/props'},
@@ -37,16 +37,16 @@ export default function renderSideBar(){
         return (
             <li
                 onClick={()=>routerSwitch(val.path)}
-                className='mt-3 h-10
-            leading-10 cursor-pointer px-4
-             box-border hover:shadow '
+                className='mt-3 min-h-10
+                            leading-8 cursor-pointer px-4
+                            box-border hover:shadow '
                 key={val.name}>
                 {val.name}
             </li>
         )
     })
     return (
-        <div className='min-w-60 shadow-lg h-side overflow-y-auto'>
+        <div className='min-w-70 shadow-lg h-side overflow-y-auto'>
             <ul >
                 {listItems}
             </ul>

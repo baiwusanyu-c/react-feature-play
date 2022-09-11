@@ -23,7 +23,8 @@ export default defineConfig({
                 red: colors.rose,
                 pink: colors.fuchsia,
                 white:'#ffffff',
-                header:'#20232a'
+                header:'#20232a',
+                codeBg:'rgb(30, 30, 30)'
             },
             fontFamily: {
                 sans: ['Graphik', 'sans-serif'],

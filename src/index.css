@@ -12,7 +12,24 @@ body{
   left: 0;
   top: 0;
 }
+.h1-title{
+  @apply text-4xl font-bold
+}
+.h2-title{
+  @apply text-3xl mb-4 font-bold
+}
+.h3-title{
+  @apply text-2xl my-2 font-bold
+}
+.hr-line{
+  @apply my-6
+}
 
-
+h1,h2,h3,h4,div,p,span,li{
+  @apply font-mono
+}
+.content-txt{
+  @apply leading-7
+}
 
 

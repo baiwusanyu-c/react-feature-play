@@ -1,7 +1,11 @@
+
+import MarkDown from '../../components/markdown/markdown'
+
 export default function renderProps (){
+
     return (
         <div>
-            props
+          <MarkDown url='../src/views/props/props.md'/>
         </div>
     )
 }

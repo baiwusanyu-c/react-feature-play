@@ -1,6 +1,7 @@
 import { useRoutes,Navigate } from 'react-router-dom';
 import Home from '../views/home/home'
 import Props from '../views/props/props'
+import PropTypes from '../views/prop-types'
 export const routes = [
     {
         path: '/',
@@ -27,6 +28,13 @@ export const routes = [
         element: <Props />,
         meta: {
             title: 'props 属性传递 Render Props',
+        }
+    },
+    {
+        path: 'propTypes',
+        element: <PropTypes />,
+        meta: {
+            title: 'PropTypes 的类型检查',
         }
     },
     /*{
