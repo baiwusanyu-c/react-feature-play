@@ -30,7 +30,7 @@ export default defineConfig({
         port:3000,
     },
     build:{
-      minify:false,
+      minify:true,
       cssCodeSplit:true
     }
 })
