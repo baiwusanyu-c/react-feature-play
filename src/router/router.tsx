@@ -1,6 +1,6 @@
 import { useRoutes,Navigate } from 'react-router-dom';
 import Home from '../views/home/home'
-import Props from '../views/props/props'
+import Props from '../views/props'
 import PropTypes from '../views/prop-types'
 export const routes = [
     {

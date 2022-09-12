@@ -8,7 +8,6 @@ export default function renderPropTypes(){
         func:'markdown/prop-types/prop-type-func.md',
         class:'markdown/prop-types/prop-type-class.md'
     }
-    console.log(mdList)
     return (
         <div className='props-types'>
             <h1 className='h1-title'>PropTypes 的类型检查</h1>
@@ -25,8 +24,8 @@ export default function renderPropTypes(){
             <h3 className="h3-title">函数组件代码样例</h3>
             <MarkDown url= {mdList.func}/>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>类组件的类型检查</h2>
-            <p className='content-txt'>类组件的类型检查和函数组件一样，使用 PropTypes 来进行类型检查。
+            <h2 className='h2-title'>class类组件的类型检查</h2>
+            <p className='content-txt'>class类组件的类型检查和函数组件一样，使用 PropTypes 来进行类型检查。
                 而默认值可以通过在class中设置static 属性 defaultProps 来定义
             </p>
             <div className='my-4'>
@@ -37,9 +36,9 @@ export default function renderPropTypes(){
                     showIcon
                 />
             </div>
-            <h3 className="h3-title">类组件渲染样例</h3>
+            <h3 className="h3-title">class类组件渲染样例</h3>
             <ParentClass/>
-            <h3 className="h3-title">类组件代码样例</h3>
+            <h3 className="h3-title">class类组件代码样例</h3>
             <MarkDown url= {mdList.class}/>
         </div>
     )

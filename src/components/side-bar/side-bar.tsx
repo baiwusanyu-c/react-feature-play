@@ -1,11 +1,11 @@
 import {useNavigate} from "react-router-dom";
 const barList = [
     {name:'介绍',path:'/home'},
-    {name:'props 属性传递 Render Props',path:'/props'},
+    {name:'props 属性传递',path:'/props'},
     {name:'PropTypes 的类型检查',path:'/propTypes'},
+    {name:'Render Props',path:'/props'},
     {name:'event 事件绑定',path:'/props'},
     {name:'state 与 生命周期',path:'/props'},
-    {name:'子组件的emit',path:'/props'},
     {name:'if 条件渲染',path:'/props'},
     {name:'for 列表渲染',path:'/props'},
     {name:'props.children 插槽渲染',path:'/props'},
