@@ -22,13 +22,13 @@ export default function renderProps (){
             <h3 className="h3-title">函数组件代码样例</h3>
             <MarkDown url= {mdList.func}/>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>class类组件props传递</h2>
+            <h2 className='h2-title'>class 类组件 render props</h2>
             <p className='content-txt'>
-                class类组件写法基本上和函数一样。
+                class 类组件写法基本上和函数一样。
             </p>
-            <h3 className="h3-title">class类组件渲染样例</h3>
+            <h3 className="h3-title">class 类组件渲染样例</h3>
             <ParentClass/>
-            <h3 className="h3-title">class类组件代码样例</h3>
+            <h3 className="h3-title">class 类组件代码样例</h3>
             <MarkDown url= {mdList.class}/>
 
         </div>

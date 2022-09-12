@@ -24,9 +24,9 @@ export default function renderPropTypes(){
             <h3 className="h3-title">函数组件代码样例</h3>
             <MarkDown url= {mdList.func}/>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>class类组件的类型检查</h2>
-            <p className='content-txt'>class类组件的类型检查和函数组件一样，使用 PropTypes 来进行类型检查。
-                而默认值可以通过在class中设置static 属性 defaultProps 来定义
+            <h2 className='h2-title'>class 类组件的类型检查</h2>
+            <p className='content-txt'>class 类组件的类型检查和函数组件一样，使用 PropTypes 来进行类型检查。
+                而默认值可以通过在 class 中设置 static 属性 defaultProps 来定义
             </p>
             <div className='my-4'>
                 <Alert
@@ -36,9 +36,9 @@ export default function renderPropTypes(){
                     showIcon
                 />
             </div>
-            <h3 className="h3-title">class类组件渲染样例</h3>
+            <h3 className="h3-title">class 类组件渲染样例</h3>
             <ParentClass/>
-            <h3 className="h3-title">class类组件代码样例</h3>
+            <h3 className="h3-title">class 类组件代码样例</h3>
             <MarkDown url= {mdList.class}/>
         </div>
     )
