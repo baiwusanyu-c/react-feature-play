@@ -11,14 +11,13 @@ export default defineConfig({
        chunkSplitPlugin({
            // 指定拆包策略
            customSplitting: {
-               'react-vendor': ['react', 'react-dom','react-router-dom','antd'],
+               'react-vendor': ['react', 'react-dom','react-router-dom'],
                'utils-vendor': [
-                   /src\/utils/
+                   /src\/utils/,
+                   /src\/router/,
+                   /src\/components/
                ],
-               //'lodash': ['lodash'],
-               // /src\/router/,
-               // /src\/components/
-               //'library': ['antd'],
+               'library': ['antd'],
            }
        }),
       mkcert(),
