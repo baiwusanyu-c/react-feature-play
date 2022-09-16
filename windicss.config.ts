@@ -24,7 +24,8 @@ export default defineConfig({
                 pink: colors.fuchsia,
                 white:'#ffffff',
                 header:'#20232a',
-                codeBg:'rgb(30, 30, 30)'
+                codeBg:'rgb(30, 30, 30)',
+                green:'#42b883'
             },
             fontFamily: {
                 sans: ['Graphik', 'sans-serif'],

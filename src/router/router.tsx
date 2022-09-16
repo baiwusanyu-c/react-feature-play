@@ -5,6 +5,7 @@ import PropTypes from '../views/prop-types'
 import RenderProps from '../views/render-props'
 import EventState from '../views/event-state'
 import IfRender from '../views/if-render'
+import ForRender from '../views/for-render'
 export const routes = [
     {
         path: '/',
@@ -59,6 +60,13 @@ export const routes = [
         element: <IfRender />,
         meta: {
             title: 'if 条件渲染',
+        }
+    },
+    {
+        path: 'forRender',
+        element: <ForRender />,
+        meta: {
+            title: 'for 列表渲染',
         }
     },
     /*{

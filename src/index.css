@@ -16,13 +16,13 @@ body{
   @apply text-4xl font-bold
 }
 .h2-title{
-  @apply text-3xl mb-4 font-bold
+  @apply text-3xl mb-8 font-bold
 }
 .h3-title{
-  @apply text-2xl my-2 font-bold
+  @apply text-2xl my-6 font-bold
 }
 .hr-line{
-  @apply my-6
+  @apply my-8
 }
 
 h1,h2,h3,h4,div,p,span,li{

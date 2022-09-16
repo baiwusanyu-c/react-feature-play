@@ -14,7 +14,7 @@ export default function renderMd (props:IMDProps){
         useFetch(props.url,(res:string)=>setSourceData(()=>res))
     },[useFetch])
     return (
-        <div className='px-4 py-2 bg-codeBg mt-4'>
+        <div className='p-2 bg-codeBg mt-4 rounded'>
             {/* @ts-ignore*/}
             <ReactMarkdown children={sourceData as any}
                            remarkPlugins={[remarkGfm]}
