@@ -1,0 +1,52 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html{
+  font-size: 16px;
+  @apply font-mono
+}
+
+#root{
+  @apply fixed w-full h-full left-0 top-0
+}
+.h1-title{
+  @apply text-4xl font-bold
+}
+.h2-title{
+  @apply text-3xl mb-8 font-semibold
+}
+.h3-title{
+  @apply text-2xl my-6 font-medium
+}
+
+.hr-line{
+  @apply my-8
+}
+
+h1,h2,h3,h4,div,p,span,li{
+  @apply font-mono
+}
+
+.content-txt{
+  @apply leading-7
+}
+
+.side-bar-li__active{
+  @apply text-green;
+}
+
+.side-bar-li__active::before,
+.side-bar-li:hover::before{
+  content: ' ';
+  @apply w-1.5 absolute bg-green h-full left-0.5 rounded
+}
+
+.app-title{
+  background: -webkit-linear-gradient(315deg,#42d392 25%,#647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

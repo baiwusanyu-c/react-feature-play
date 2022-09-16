@@ -25,7 +25,8 @@ export default defineConfig({
                 white:'#ffffff',
                 header:'#20232a',
                 codeBg:'rgb(30, 30, 30)',
-                green:'#42b883'
+                green:'#42b883',
+                greenD:'#33a06f'
             },
             fontFamily: {
                 sans: ['Graphik', 'sans-serif'],

@@ -1,0 +1,12 @@
+.ant-btn:hover,
+.ant-btn:focus{
+    @apply text-green border-green
+}
+
+.ant-btn-primary{
+    @apply bg-green border-green
+}
+.ant-btn-primary:hover,
+.ant-btn-primary:focus{
+    @apply bg-greenD border-greenD text-white
+}

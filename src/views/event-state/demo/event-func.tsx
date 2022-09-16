@@ -23,10 +23,10 @@ export default function renderEventFunc (){
 
     return(
         <div>
-            <Button type="primary" className='m-2' onClick={handleClick}>
+            <Button type="primary" className='m-2' onClick={handleClick} shape='round'>
                 Click me {count.num}
             </Button>
-            <Button type="primary" className='m-2'>
+            <Button className='m-2' shape='round'>
                 <a href="#" onClick={preventClick}>
                     preventDefault {count.name}
                 </a>

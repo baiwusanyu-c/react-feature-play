@@ -31,10 +31,11 @@ export default class ParentClass extends React.Component<any,IState>{
             <div>
                 <Button type="primary"
                         className='m-2'
+                        shape='round'
                         onClick={this.handleClick}>
                     Click me {this.state.num}
                 </Button>
-                <Button type="primary" className='m-2'>
+                <Button className='m-2' shape='round'>
                     <a href="#" onClick={this.preventClick}>
                         preventDefault {this.state.name}
                     </a>

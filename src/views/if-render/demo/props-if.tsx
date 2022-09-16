@@ -17,7 +17,7 @@ export default function renderVarIf(){
 
     return (
         <div className='flex'>
-            <Button type="primary" onClick={()=> setShow(!show)}>
+            <Button type="primary" onClick={()=> setShow(!show)} shape='round'>
                 点击切换
             </Button>
             <Comp show={show}></Comp>
