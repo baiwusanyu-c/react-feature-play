@@ -5,7 +5,7 @@ const barList = [
     {name:'🐶 PropTypes 的类型检查',path:'/propTypes'},
     {name:'state 与 生命周期',path:'/props'},
     {name:'🐶 event 事件绑定 与 响应式数据',path:'/eventState'},
-    {name:'if 条件渲染',path:'/props'},
+    {name:'if 条件渲染',path:'/ifRender'},
     {name:'for 列表渲染',path:'/props'},
     {name:'props.children 插槽渲染',path:'/props'},
     {name:'具名插槽渲染',path:'/props'},

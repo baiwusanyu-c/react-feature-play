@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ant-design/icons': ^4.7.0
   '@baiwusanyu/eslint-config': ^1.0.6
   '@commitlint/cli': ^16.2.1
   '@commitlint/config-conventional': ^16.2.1
@@ -27,6 +28,7 @@ specifiers:
   windicss: ^3.5.6
 
 dependencies:
+  '@ant-design/icons': 4.7.0_biqbaboplfbrettd7655fr4n2y
   antd: 4.23.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0

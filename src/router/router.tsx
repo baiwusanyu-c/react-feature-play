@@ -4,6 +4,7 @@ import Props from '../views/props'
 import PropTypes from '../views/prop-types'
 import RenderProps from '../views/render-props'
 import EventState from '../views/event-state'
+import IfRender from '../views/if-render'
 export const routes = [
     {
         path: '/',
@@ -51,6 +52,13 @@ export const routes = [
         element: <EventState />,
         meta: {
             title: 'event 事件绑定 与 响应式数据',
+        }
+    },
+    {
+        path: 'ifRender',
+        element: <IfRender />,
+        meta: {
+            title: 'if 条件渲染',
         }
     },
     /*{
