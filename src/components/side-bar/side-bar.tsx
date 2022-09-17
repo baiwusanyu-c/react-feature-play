@@ -40,7 +40,7 @@ export default function renderSideBar(){
                 onClick={()=>routerSwitch(val.path)}
                 className={ `mt-3 min-h-10 relative
                             leading-10 cursor-pointer px-4
-                            box-border hover:shadow hover:text-green 
+                            box-border hover:shadow hover:text-green hover:font-bold
                             ${ route.pathname === val.path ? 'side-bar-li__active' : 'side-bar-li'}`}
                 key={val.name}>
                 {val.name}

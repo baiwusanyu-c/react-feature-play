@@ -2,6 +2,7 @@
 import MarkDown from '../../components/markdown/markdown'
 import ParentFunc from "../render-props/demo/parent-func";
 import ParentClass from "../render-props/demo/parent-class";
+import Anchor from "../../components/anchor/anchor";
 
 export default function renderProps (){
     const mdList = {
@@ -10,25 +11,54 @@ export default function renderProps (){
     }
     return (
         <div className='props-types'>
-            <h1 className='h1-title'>Render Props</h1>
+            <Anchor tagType='h1'
+                    idVal='h1_render'
+                    className='h1-title'>
+                Render Props
+            </Anchor>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>函数型组件 render props</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_render_func'
+                    className='h2-title'>
+                函数型组件 render props
+            </Anchor>
             <p className='content-txt'>
                 render props 是指以函数的形式传递 props 给组件，而这个函数返回的可以是 dom 或 组件的
                 jsx， 而函数的参数由子组件调用时传递出来。没错他其实对应的就是 vue 的作用域插槽。
             </p>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_render_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
             <ParentFunc/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_render_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.func}/>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>class 类组件 render props</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_render_class'
+                    className='h2-title'>
+                class 类组件 render props
+            </Anchor>
             <p className='content-txt'>
                 class 类组件写法基本上和函数一样。
             </p>
-            <h3 className="h3-title">class 类组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_render_class_demo'
+                    className='h3-title'>
+                class 类组件渲染样例
+            </Anchor>
             <ParentClass/>
-            <h3 className="h3-title">class 类组件代码样例</h3>
+
+            <Anchor tagType='h3'
+                    idVal='h3_render_class_code'
+                    className='h3-title'>
+                class 类组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.class}/>
 
         </div>

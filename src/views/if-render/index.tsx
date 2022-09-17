@@ -4,6 +4,7 @@ import VarIf from "../if-render/demo/var-if";
 import ThreeAnd from "../if-render/demo/three-and";
 import PropsIf from "../if-render/demo/props-if";
 import PropsNull from "../if-render/demo/props-null";
+import Anchor from "../../components/anchor/anchor";
 
 export default function renderProps (){
     const mdList = {
@@ -14,7 +15,11 @@ export default function renderProps (){
     }
     return (
         <div className='props-types'>
-            <h1 className='h1-title'>if 条件渲染</h1>
+            <Anchor tagType='h1'
+                    idVal='h1_if'
+                    className='h1-title'>
+                if 条件渲染
+            </Anchor>
 
             <p className='content-txt mt-3'>
                 相对于 vue 中 通过 v-if 和 v-show 指令来实现条件渲染，
@@ -23,47 +28,97 @@ export default function renderProps (){
             </p>
 
             <hr className='hr-line'/>
-            <h2 className='h2-title'>基于 props 的条件渲染两个不同的组件</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_props_if'
+                    className='h2-title'>
+                基于 props 的条件渲染两个不同的组件
+            </Anchor>
             <p className='content-txt'>
                 你可以将你要条件渲染的组件封装成一个函数组件，通过一个 props 在组件内通过 if 语句 来返回不同的组件渲染。
             </p>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_if_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
             <PropsIf/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_if_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.propsIf}/>
 
 
             <hr className='hr-line'/>
-            <h2 className='h2-title'>基于 props 的条件渲染一个组件的显隐</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_props_if_null'
+                    className='h2-title'>
+                基于 props 的条件渲染一个组件的显隐
+            </Anchor>
+
             <p className='content-txt'>
                 你可以将你要条件渲染的组件封装成一个函数组件，通过一个 props 在组件内通过 if 语句来控制组件显示隐藏，
                 你隐藏组件时，函数组件直接返回 null 即可。
             </p>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_if_null_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
             <PropsNull/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_if_null_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.propsNull}/>
 
-
             <hr className='hr-line'/>
-            <h2 className='h2-title'>render 内变量控制实现条件渲染</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_var_if'
+                    className='h2-title'>
+                render 内变量控制实现条件渲染
+            </Anchor>
             <p className='content-txt'>
                在 render 函数中直接使用 if 判断来给一个变量赋值上不同的组件值，并在 jsx 中渲染这个变量
             </p>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_var_if_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
+
             <VarIf/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_var_if_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
+
             <MarkDown url= {mdList.varIf}/>
 
 
             <hr className='hr-line'/>
-            <h2 className='h2-title'>与运算符 && 和 三目运算符的条件渲染</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_three_if'
+                    className='h2-title'>
+                与运算符 && 和 三目运算符的条件渲染
+            </Anchor>
             <p className='content-txt'>
                 运用 jsx 的灵活能力，使用逻辑运算符实现条件渲染，直接在 jsx 中编写逻辑实现条件渲染
             </p>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_three_if_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
             <ThreeAnd/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_three_if_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.threeAnd}/>
         </div>
     )

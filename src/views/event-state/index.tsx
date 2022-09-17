@@ -3,6 +3,7 @@ import MarkDown from '../../components/markdown/markdown'
 import EventFunc from "../event-state/demo/event-func";
 import EventClass from "../event-state/demo/event-class";
 import {Alert} from "antd";
+import Anchor from "../../components/anchor/anchor";
 
 
 export default function renderProps (){
@@ -12,9 +13,18 @@ export default function renderProps (){
     }
     return (
         <div className='props-types'>
-            <h1 className='h1-title'>event 事件绑定与响应式数据</h1>
+            <Anchor tagType='h1'
+                    idVal='h1_event'
+                    className='h1-title'>
+                event 事件绑定与响应式数据
+            </Anchor>
+
             <hr className='hr-line'/>
-            <h2 className='h2-title'>函数型组件 event 与响应式数据</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_event_func'
+                    className='h2-title'>
+                函数型组件 event 与响应式数据
+            </Anchor>
             <p className='content-txt'>
                 在 react 中事件的绑定都是以 onXXX 在 jsx 上进行绑定的，事件函数会接受一个事件对象 e，
                 如果过你想 阻止这个事件默认行为需要手动的使用 e.preventDefault();
@@ -37,12 +47,26 @@ export default function renderProps (){
                     showIcon
                 />
             </div>
-            <h3 className="h3-title">函数组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_event_func_demo'
+                    className='h3-title'>
+                函数组件渲染样例
+            </Anchor>
+
             <EventFunc/>
-            <h3 className="h3-title">函数组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_event_func_code'
+                    className='h3-title'>
+                函数组件代码样例
+            </Anchor>
+
             <MarkDown url= {mdList.func}/>
             <hr className='hr-line'/>
-            <h2 className='h2-title'>class 类组件 event 与响应式数据</h2>
+            <Anchor tagType='h2'
+                    idVal='h2_event_class'
+                    className='h2-title'>
+                class 类组件 event 与响应式数据
+            </Anchor>
             <p className='content-txt'>
                 class 类组件，在 jsx 中的书写方式和函数组件类似，只不过我们需要在 class 中声明对应的事件方法，
                 同时在构造函数中 修改绑定 this 指向（this.handleClick = this.handleClick.bind(this);）
@@ -65,9 +89,17 @@ export default function renderProps (){
                     showIcon
                 />
             </div>
-            <h3 className="h3-title">class 类组件渲染样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_event_class_demo'
+                    className='h3-title'>
+                class 类组件渲染样例
+            </Anchor>
             <EventClass/>
-            <h3 className="h3-title">class 类组件代码样例</h3>
+            <Anchor tagType='h3'
+                    idVal='h3_event_class_code'
+                    className='h3-title'>
+                class 类组件代码样例
+            </Anchor>
             <MarkDown url= {mdList.class}/>
 
         </div>

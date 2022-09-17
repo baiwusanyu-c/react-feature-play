@@ -37,7 +37,7 @@ export default defineConfig({
                 144: '36rem',
             },
             height: {
-                side: 'calc(100vh - 3rem)',
+                side: 'calc(100vh - 4rem)',
                 md: '16px',
                 lg: '24px',
                 xl: '48px',

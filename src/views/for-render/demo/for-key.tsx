@@ -7,7 +7,7 @@ export default function renderForKey(){
                 className='
                 rounded
                 border m-3 px-2 h-8
-                leading-8 text-green border-green'
+                leading-8 text-green border-green hover:bg-green hover:text-white hover:font-bold'
                 key={'keyBNum' + keyBNum}>
                 index: {keyBNum}
             </li>

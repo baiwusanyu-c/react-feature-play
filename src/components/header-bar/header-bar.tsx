@@ -6,7 +6,6 @@ export default function renderHeader(){
         bg-white just
         justify-center
         text-xl
-        border
         shadow-lg
         h-14 text-white w-full flex fixed top-0 items-center'>
             <a href="https://reactjs.org" target="_blank" className='mr-4 w-7'>
