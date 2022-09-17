@@ -20,13 +20,13 @@ export default function renderAnchorTitle (props:IAnchorProps){
     if (props.tagType === 'h1'){
         renderElm = (<h1 className={`${props.className} flex`}>
             {elmA}
-            <p>{props.children}</p>
+            <p>🪷 {props.children}</p>
         </h1>)
     }
     if (props.tagType === 'h2'){
         renderElm = (<h2 className={`${props.className} flex`}>
             {elmA}
-            <p>{props.children}</p>
+            <p>🍵 {props.children}</p>
         </h2>)
     }
     if (props.tagType === 'h3'){

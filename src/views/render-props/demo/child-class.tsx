@@ -5,7 +5,7 @@ interface IChildProps {
     name?:string
     render:Function
 }
-export default class ChildClass extends React.Component<IChildProps> {
+export default class RenderChildClass extends React.Component<IChildProps> {
     static propTypes = {
         name: PropTypes.string,
         render:PropTypes.func

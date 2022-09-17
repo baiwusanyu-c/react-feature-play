@@ -16,14 +16,14 @@ export default function renderProps (){
             <Anchor tagType='h1'
                     idVal='h1_event'
                     className='h1-title'>
-                event 事件绑定与响应式数据
+                event 事件绑定与响 state
             </Anchor>
 
             <hr className='hr-line'/>
             <Anchor tagType='h2'
                     idVal='h2_event_func'
                     className='h2-title'>
-                函数型组件 event 与响应式数据
+                函数型组件 event 与响应式数据 state
             </Anchor>
             <p className='content-txt'>
                 在 react 中事件的绑定都是以 onXXX 在 jsx 上进行绑定的，事件函数会接受一个事件对象 e，
@@ -65,7 +65,7 @@ export default function renderProps (){
             <Anchor tagType='h2'
                     idVal='h2_event_class'
                     className='h2-title'>
-                class 类组件 event 与响应式数据
+                class 类组件 event 与响应式数据 state
             </Anchor>
             <p className='content-txt'>
                 class 类组件，在 jsx 中的书写方式和函数组件类似，只不过我们需要在 class 中声明对应的事件方法，

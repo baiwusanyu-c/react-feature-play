@@ -5,7 +5,7 @@ interface IChildProps {
     name?:string
     age?:number
 }
-export default class ChildClass extends React.Component<IChildProps> {
+export default class PropTypesChildClass extends React.Component<IChildProps> {
     static propTypes = {
         name: PropTypes.string,
         age:PropTypes.number

@@ -4,7 +4,7 @@ interface IState {
     num:number
     name:string
 }
-export default class ParentClass extends React.Component<any,IState>{
+export default class EventParentClass extends React.Component<any,IState>{
     constructor(props:any) {
         super(props)
         this.state = {

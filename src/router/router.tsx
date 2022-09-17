@@ -6,19 +6,11 @@ import RenderProps from '../views/render-props'
 import EventState from '../views/event-state'
 import IfRender from '../views/if-render'
 import ForRender from '../views/for-render'
+import StateLifecycle from '../views/lifecycle'
 export const routes = [
     {
         path: '/',
         element: <Navigate to= '/home'/>,
-       /* children: [
-            {
-                path: 'home',
-                element: <Home />,
-                meta: {
-                    title: '首页',
-                }
-            }
-        ]*/
     },
     {
         path: 'home',
@@ -52,7 +44,7 @@ export const routes = [
         path: 'eventState',
         element: <EventState />,
         meta: {
-            title: 'event 事件绑定 与 响应式数据',
+            title: 'event 事件绑定 与 state',
         }
     },
     {
@@ -69,6 +61,14 @@ export const routes = [
             title: 'for 列表渲染',
         }
     },
+    {
+        path: 'stateLifecycle',
+        element: <StateLifecycle />,
+        meta: {
+            title: '生命周期',
+        }
+    },
+
     /*{
         path: '*',
         element: <Page404 />,
