@@ -1,39 +1,38 @@
-import type { ReactNode } from 'react'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Alert } from 'antd'
 interface IProps {
-  children?: ReactNode
+  MySlot: JSX.Element
 }
 class CompSlotClass extends React.Component<IProps> {
   static propTypes = {
-    children: PropTypes.node,
+    MySlot: PropTypes.node,
   }
 
   static defaultProps = {
-    children: undefined,
+    MySlot: undefined,
   }
 
   render() {
     return (
             <div>
-                {this.props.children}
+                {this.props.MySlot}
             </div>
     )
   }
 }
 
 export default class RenderSlotClass extends React.Component {
+  mySlot = () => (<Alert
+        message="Success"
+        description="函数组件的具名插槽渲染"
+        type="success" />)
+
   render() {
     return (
             <div>
-                <CompSlotClass>
-                    <Alert
-                        message="Success"
-                        description="class 类型组件的普通插槽渲染"
-                        type="success"
-                    />
-                </CompSlotClass>
+                <CompSlotClass MySlot={ this.mySlot() } />
+
             </div>
     )
   }

@@ -1,8 +1,8 @@
 import Child from './child-func'
-export default function parentCompnent(){
-    return (
+export default function parentCompnent() {
+  return (
         <div>
-            <Child name='baiwusanyu'/>
+            <Child name="baiwusanyu"/>
         </div>
-    )
+  )
 }

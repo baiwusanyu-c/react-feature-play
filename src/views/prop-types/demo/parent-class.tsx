@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 import ChildClass from './child-class'
 export default class ProptypesParentClass extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
             <div>
-                <ChildClass name='baiwusanyu'/>
+                <ChildClass name="baiwusanyu"/>
             </div>
-        );
-    }
+    )
+  }
 }

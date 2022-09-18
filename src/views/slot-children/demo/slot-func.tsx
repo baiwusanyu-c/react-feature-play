@@ -1,25 +1,24 @@
-import PropTypes from "prop-types";
-import {ReactNode} from "react";
-import { Alert } from 'antd';
+import PropTypes from 'prop-types'
+import type { ReactNode } from 'react'
+import { Alert } from 'antd'
 interface IProps {
-    children?:ReactNode
+  children?: ReactNode
 }
 Comp.propTypes = {
-    children:PropTypes.node,
+  children: PropTypes.node,
 }
 Comp.defaultProps = {
-    children:undefined,
+  children: undefined,
 }
-function Comp(props:IProps){
-    return (
+function Comp(props: IProps) {
+  return (
         <div>
             {props.children}
         </div>
-    )
+  )
 }
-export default function renderSlotFunc(){
-
-    return (
+export default function renderSlotFunc() {
+  return (
         <div>
            <Comp>
                    <Alert
@@ -29,5 +28,5 @@ export default function renderSlotFunc(){
                    />
            </Comp>
         </div>
-    )
+  )
 }

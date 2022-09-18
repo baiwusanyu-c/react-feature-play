@@ -1,36 +1,36 @@
 import { Button } from 'antd'
-import {MouseEvent, useState} from "react";
+import type { MouseEvent } from 'react'
+import { useState } from 'react'
 interface IState {
-    num:number
-    name:string
+  num: number
+  name: string
 }
-export default function renderEventFunc (){
+export default function renderEventFunc() {
+  const [count, setCount] = useState<IState>({
+    num: 0,
+    name: 'baiwusanyu',
+  })
+  const preventClick = (e: MouseEvent<HTMLElement>) => {
+    e.preventDefault()
+    setCount({ ...count, name: '白雾三语' })
+    console.log('The link was clicked.')
+  }
 
-    const [count, setCount] = useState<IState>({
-        num:0,
-        name:'baiwusanyu'
-    });
-    const preventClick = (e:MouseEvent<HTMLElement>)=>{
-        e.preventDefault()
-        setCount({...count,name:'白雾三语'})
-        console.log('The link was clicked.');
-    }
+  const handleClick = (e: MouseEvent<HTMLElement>) => {
+    console.log(e)
+    setCount({ ...count, num: count.num + 1 })
+  }
 
-    const handleClick = (e:MouseEvent<HTMLElement>)=>{
-        console.log(e)
-        setCount({...count,num:count.num + 1})
-    }
-
-    return(
+  return (
         <div>
-            <Button type="primary" className='m-2' onClick={handleClick} shape='round'>
+            <Button type="primary" className="m-2" onClick={handleClick} shape="round">
                 Click me {count.num}
             </Button>
-            <Button className='m-2' shape='round'>
+            <Button className="m-2" shape="round">
                 <a href="#" onClick={preventClick}>
                     preventDefault {count.name}
                 </a>
             </Button>
         </div>
-    )
+  )
 }
