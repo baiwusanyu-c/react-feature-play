@@ -7,6 +7,7 @@ import EventState from '../views/event-state'
 import IfRender from '../views/if-render'
 import ForRender from '../views/for-render'
 import StateLifecycle from '../views/lifecycle'
+import SlotChildren from '../views/slot-children'
 export const routes = [
     {
         path: '/',
@@ -37,7 +38,7 @@ export const routes = [
         path: 'renderProps',
         element: <RenderProps />,
         meta: {
-            title: 'render props',
+            title: 'render props 作用域插槽',
         }
     },
     {
@@ -66,6 +67,13 @@ export const routes = [
         element: <StateLifecycle />,
         meta: {
             title: '生命周期',
+        }
+    },
+    {
+        path: 'slot',
+        element: <SlotChildren />,
+        meta: {
+            title: 'props.children 插槽渲染',
         }
     },
 

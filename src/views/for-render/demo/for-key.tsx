@@ -1,5 +1,5 @@
 
-export default function renderForKey(){
+export default function renderForRender(){
     const arr = [6,7,8,9,10]
     const liElm = arr.map((keyBNum) =>{
         return (

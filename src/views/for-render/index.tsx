@@ -4,7 +4,7 @@ import ForRender from './demo/for-render'
 import { Alert } from 'antd';
 import Anchor from "../../components/anchor/anchor";
 
-export default function renderPropTypes(){
+export default function renderFor(){
     const mdList = {
         forKey:'markdown/for-render/for-key.md',
         forRender:'markdown/for-render/for-render.md'

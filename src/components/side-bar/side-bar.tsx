@@ -7,7 +7,7 @@ const barList = [
     {name:'🐶 event 事件绑定与 state',path:'/eventState'},
     {name:'🐶 if 条件渲染',path:'/ifRender'},
     {name:'🐶 for 列表渲染',path:'/forRender'},
-    {name:'props.children 插槽渲染',path:'/slot'},
+    {name:'🐶 props.children 插槽渲染',path:'/slot'},
     {name:'具名插槽渲染',path:'/nameSlot'},
     {name:'🐶 Render Props',path:'/renderProps'},
     {name:'lazy组件懒加载',path:'/lazyComponent'},

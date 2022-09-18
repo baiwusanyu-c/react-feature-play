@@ -14,7 +14,7 @@ export default function renderProps (){
             <Anchor tagType='h1'
                     idVal='h1_render'
                     className='h1-title'>
-                Render Props
+                Render Props 作用域插槽
             </Anchor>
             <hr className='hr-line'/>
             <Anchor tagType='h2'

@@ -9,7 +9,7 @@ interface IDataType {
     vueFunc: string;
     other: string;
 }
-export default function renderPropTypes(){
+export default function renderLiftCycle(){
     const mdList = {
         lifeCycleClass:'markdown/lifecycle-class/lifecycle-class.md',
     }
