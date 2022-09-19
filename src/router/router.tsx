@@ -1,21 +1,26 @@
+import {lazy} from "react";
 import { Navigate, useRoutes } from 'react-router-dom'
-import Home from '../views/home/home'
-import Props from '../views/props'
-import PropTypes from '../views/prop-types'
-import RenderProps from '../views/render-props'
-import EventState from '../views/event-state'
-import IfRender from '../views/if-render'
-import ForRender from '../views/for-render'
-import StateLifecycle from '../views/lifecycle'
-import SlotChildren from '../views/slot-children'
-import SlotName from '../views/slot-name'
+import Home  from '../views/home/home'
+const Props  = lazy(()=> import('../views/props'))
+const PropTypes  = lazy(()=> import('../views/prop-types'))
+const RenderProps  = lazy(()=> import('../views/render-props'))
+const EventState  = lazy(()=> import('../views/event-state'))
+const IfRender  = lazy(()=> import('../views/if-render'))
+const ForRender  = lazy(()=> import('../views/for-render'))
+const StateLifecycle  = lazy(()=> import('../views/lifecycle'))
+const SlotChildren  = lazy(()=> import('../views/slot-children'))
+const SlotName  = lazy(()=> import('../views/slot-name'))
+const Lazy  = lazy(()=> import('../views/lazy'))
+
 export const routes = [
   {
     path: '/',
+    index:true,
     element: <Navigate to= "/home"/>,
   },
   {
     path: 'home',
+    index:true,
     element: <Home />,
     meta: {
       title: '首页',
@@ -23,6 +28,7 @@ export const routes = [
   },
   {
     path: 'props',
+    index:true,
     element: <Props />,
     meta: {
       title: 'props 属性传递',
@@ -30,6 +36,7 @@ export const routes = [
   },
   {
     path: 'propTypes',
+    index:true,
     element: <PropTypes />,
     meta: {
       title: 'PropTypes 的类型检查',
@@ -37,6 +44,7 @@ export const routes = [
   },
   {
     path: 'renderProps',
+    index:true,
     element: <RenderProps />,
     meta: {
       title: 'render props 作用域插槽',
@@ -44,6 +52,7 @@ export const routes = [
   },
   {
     path: 'eventState',
+    index:true,
     element: <EventState />,
     meta: {
       title: 'event 事件绑定 与 state',
@@ -51,6 +60,7 @@ export const routes = [
   },
   {
     path: 'ifRender',
+    index:true,
     element: <IfRender />,
     meta: {
       title: 'if 条件渲染',
@@ -58,6 +68,7 @@ export const routes = [
   },
   {
     path: 'forRender',
+    index:true,
     element: <ForRender />,
     meta: {
       title: 'for 列表渲染',
@@ -65,6 +76,7 @@ export const routes = [
   },
   {
     path: 'stateLifecycle',
+    index:true,
     element: <StateLifecycle />,
     meta: {
       title: '生命周期',
@@ -72,6 +84,7 @@ export const routes = [
   },
   {
     path: 'slot',
+    index:true,
     element: <SlotChildren />,
     meta: {
       title: 'props.children 插槽渲染',
@@ -79,9 +92,19 @@ export const routes = [
   },
   {
     path: 'nameSlot',
+    index:true,
     element: <SlotName />,
     meta: {
       title: '具名插槽渲染 name',
+    },
+  },
+
+  {
+    path: 'lazy',
+    index:true,
+    element: <Lazy />,
+    meta: {
+      title: 'lazy组件懒加载',
     },
   },
 
@@ -95,6 +118,7 @@ export const routes = [
         }
     }, */
 ]
+
 const Routes = () => (
   useRoutes(routes)
 )

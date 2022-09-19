@@ -10,7 +10,7 @@ const barList = [
   { name: '🐶 props.children 插槽渲染', path: '/slot' },
   { name: '🐶 具名插槽渲染 name', path: '/nameSlot' },
   { name: '🐶 Render Props', path: '/renderProps' },
-  { name: 'lazy组件懒加载', path: '/lazyComponent' },
+  { name: '🐶 lazy组件懒加载', path: '/lazy' },
   { name: 'context 跨层级组件props', path: '/contextProps' },
   { name: 'Ref 获取组件实例 或 Dom', path: '/ref' },
   { name: 'Refs & DOM', path: '/refsDom' },
