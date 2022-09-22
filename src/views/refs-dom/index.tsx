@@ -1,77 +1,89 @@
 import { Alert } from 'antd'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
-import ForKey from './demo/for-key'
-import ForRender from './demo/for-render'
+import RefsDomCreate from './demo/refs-dom-creaet'
+import RefsDomCb from './demo/refs-dom-cb'
 
 export default function renderFor() {
   const mdList = {
-    forKey: 'markdown/for-render/for-key.md',
-    forRender: 'markdown/for-render/for-render.md',
+    refsDomCreate: 'markdown/refs-dom/refs-dom-create.md',
+    refsDomCb: 'markdown/refs-dom/refs-dom-cb.md',
   }
   return (
         <div className="props-types">
             <Anchor tagType="h1"
-                    idVal="h1_for"
+                    idVal="h1_refs_dom"
                     className="h1-title">
                 Ref 获取组件实例 或 Dom
             </Anchor>
 
             <hr className="hr-line"/>
             <Anchor tagType="h2"
-                    idVal="h2_map_for"
+                    idVal="h2_refs_dom_create"
                     className="h2-title">
-                基于数组 map 方法的列表循环渲染
+                class 类型组件中 createRef
             </Anchor>
             <p className="content-txt">
-                React 的列表渲染也是得益于 jsx 的特性，可以使用 js 数组的 map 方法生成一个 jsx 数组来渲染即可，
-                并且 class 类型组件和函数组件在写法上也没有区别。 区别于 vue 的 v-for 指令，还是 vue 方便多了。
+                在 React 中，我们可以通过 ref 特性来获取 jsx 模板中某个元素的 dom 或 是组件实例对象，通常我们需要调用 React.createRef 这个
+                api 去创建一个 ref 对象，并将这个对象绑定到需要获取的 jsx 元素的 ref 属性上，name我们就可以通过这个 ref 对象上的 current 属性访问到对应的元素 dom
+                或组件实例。相比较于 vue，通过 ref api 创建变量，并绑定给 ref 属性，二者之间的语法设计差异基本没有。
             </p>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_demo"
-                    className="h3-title">
-                组件渲染样例
-            </Anchor>
-            <ForRender/>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_code"
-                    className="h3-title">
-                组件代码样例
-            </Anchor>
-            <MarkDown url= {mdList.forRender}/>
 
-            <hr className="hr-line"/>
-            <Anchor tagType="h2"
-                    idVal="h2_map_for_key"
-                    className="h2-title">
-                列表循环渲染中的 key
-            </Anchor>
-            <p className="content-txt">
-                和 vue 一样，在列表循环渲染中，需要绑定一个 key 值，
-                使得在虚拟 dom 进行 diff 算法更新时能够更加高效的进行对比查找出更新元素。
-            </p>
             <div className="my-4">
                 <Alert
                     message="Warning"
-                    description="这里够绑定 key 值一定是就近的 map 方法中绑定原则。
-                    例如你在 map 方法中循环了一个组件 itemComp，其渲染的内容是 li 标签，
-                    此时你不可以把 key 设置在 li 标签上（itemComp 组件），而必须把 key 设置在 map 方法循环的 itemComp 上"
+                    description="值得注意的是，ref 获取组件实例，这是对 class 类型组件而言的，函数组件没有实例对象，因此你不可以使用本章节介绍的方法
+                    来获取函数组件的实例。此外，当 ref 属性处在的标签元素是一个组件时，通常获取的是组件实例，但是在某些场景中你可能想要获取组件的元素 dom，
+                    此时需要使用 forwardRef ,forwardRef 不仅可以用于获取组件的 dom ，也可用于函数组件，详情见 refs 转发章节。"
                     type="warning"
                     showIcon
                 />
             </div>
             <Anchor tagType="h3"
-                    idVal="h3_map_for_key_demo"
+                    idVal="h3_refs_dom_create_demo"
                     className="h3-title">
-                组件代码样例
+                组件渲染样例
             </Anchor>
-            <ForKey/>
+            <RefsDomCreate/>
             <Anchor tagType="h3"
-                    idVal="h3_map_for_key_code"
+                    idVal="h3_refs_dom_create_code"
                     className="h3-title">
                 组件代码样例
             </Anchor>
-            <MarkDown url= {mdList.forKey}/>
+            <MarkDown url= {mdList.refsDomCreate}/>
+
+            <hr className="hr-line"/>
+            <Anchor tagType="h2"
+                    idVal="h2_refs_dom_cb"
+                    className="h2-title">
+                class 类型组件中 refs 回调
+            </Anchor>
+            <p className="content-txt">
+               除了使用 React.createRef 创建 ref 对象并绑定到对应 jsx 元素的 ref 属性上，来实现获取 dom 元素或组件实例，react 中
+                也可以把 ref 对象定义成一个回调方法，并把这个方法绑定给指定的 jsx 元素的 ref 属性。这个回调方法接受的参数，就是对应的组件
+                实例或 dom 元素。
+            </p>
+            <div className="my-4">
+                <Alert
+                    message="Warning"
+                    description="React 将在组件挂载时，会调用 ref 回调函数并传入 DOM 元素，当卸载时调用它并传入 null。
+                    在 componentDidMount 或 componentDidUpdate 触发前，React 会保证 refs 一定是最新的。"
+                    type="warning"
+                    showIcon
+                />
+            </div>
+            <Anchor tagType="h3"
+                    idVal="h3_refs_dom_cb_demo"
+                    className="h3-title">
+                组件代码样例
+            </Anchor>
+            <RefsDomCb/>
+            <Anchor tagType="h3"
+                    idVal="h3_refs_dom_cb_code"
+                    className="h3-title">
+                组件代码样例
+            </Anchor>
+            <MarkDown url= {mdList.refsDomCb}/>
         </div>
   )
 }
