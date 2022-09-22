@@ -12,14 +12,14 @@ export default function renderFor() {
   return (
         <div className="props-types">
             <Anchor tagType="h1"
-                    idVal="h1_for"
+                    idVal="h1_context"
                     className="h1-title">
                 context 跨层级组件props
             </Anchor>
 
             <hr className="hr-line"/>
             <Anchor tagType="h2"
-                    idVal="h2_map_for"
+                    idVal="h2_context_func"
                     className="h2-title">
                 函数组件中，对 context 的基本使用
             </Anchor>
@@ -41,13 +41,13 @@ export default function renderFor() {
                 />
             </div>
             <Anchor tagType="h3"
-                    idVal="h3_map_for_demo"
+                    idVal="h3_context_func_demo"
                     className="h3-title">
                 函数组件渲染样例
             </Anchor>
             <CtxParentFunc />
             <Anchor tagType="h3"
-                    idVal="h3_map_for_code"
+                    idVal="h3_context_func_code"
                     className="h3-title">
                 函数组件代码样例
             </Anchor>
@@ -55,18 +55,18 @@ export default function renderFor() {
 
             <hr className="hr-line"/>
             <Anchor tagType="h2"
-                    idVal="h2_map_for_key"
+                    idVal="h2_context_class"
                     className="h2-title">
                 class 类型组件中，对 context 的基本使用
             </Anchor>
             <Anchor tagType="h3"
-                    idVal="h3_map_for_key_demo"
+                    idVal="h2_context_class_demo"
                     className="h3-title">
                 class 类型组件代码样例
             </Anchor>
              <CtxParentClass />
             <Anchor tagType="h3"
-                    idVal="h3_map_for_key_code"
+                    idVal="h2_context_class_code"
                     className="h3-title">
                 class 类型组件代码样例
             </Anchor>

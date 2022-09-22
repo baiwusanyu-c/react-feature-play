@@ -12,6 +12,7 @@ const SlotChildren = lazy(() => import('../views/slot-children'))
 const SlotName = lazy(() => import('../views/slot-name'))
 const Lazy = lazy(() => import('../views/lazy'))
 const ContextInject = lazy(() => import('../views/context-inject'))
+const RefsDom = lazy(() => import('../views/refs-dom'))
 export const routes = [
   {
     path: '/',
@@ -113,7 +114,16 @@ export const routes = [
     index: true,
     element: <ContextInject />,
     meta: {
-      title: 'lazy组件懒加载',
+      title: 'context 跨层级组件props',
+    },
+  },
+
+  {
+    path: 'refsDom',
+    index: true,
+    element: <RefsDom />,
+    meta: {
+      title: 'Ref 获取组件实例 或 Dom',
     },
   },
 
