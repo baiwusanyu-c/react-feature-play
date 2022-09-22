@@ -16,8 +16,10 @@ export default defineConfig({
           /src\/utils/,
           /src\/router/,
           /src\/components/,
+          'remark-gfm',
+          'react-markdown',
+          'react-syntax-highlighter',
         ],
-        'library': ['antd'],
       },
     }),
     mkcert(),
@@ -29,7 +31,7 @@ export default defineConfig({
     port: 3010,
   },
   build: {
-    minify: true,
+    minify: false,
     cssCodeSplit: true,
   },
 })
