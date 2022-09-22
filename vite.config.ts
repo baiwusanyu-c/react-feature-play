@@ -25,8 +25,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     // https 选项需要开启
-    https: true,
-    port: 3000,
+    https: false,
+    port: 3010,
   },
   build: {
     minify: true,

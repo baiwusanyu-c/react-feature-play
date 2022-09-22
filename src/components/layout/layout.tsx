@@ -1,8 +1,8 @@
+import { Suspense } from 'react'
+import { Spin } from 'antd'
 import HeaderBar from '../header-bar/header-bar'
 import SideBar from '../side-bar/side-bar'
 import RoutesList from '../../router/router'
-import {Suspense} from "react";
-import {Spin} from "antd";
 function renderLayout() {
   return (
         <div className="w-full h-full">

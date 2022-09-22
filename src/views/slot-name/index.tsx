@@ -1,8 +1,8 @@
+import { Alert } from 'antd'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
 import SlotNameFunc from './demo/slot-name-func'
 import SlotNameClass from './demo/slot-name-class'
-import {Alert} from "antd";
 
 export default function renderSlot() {
   const mdList = {

@@ -1,6 +1,6 @@
+import { Alert } from 'antd'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
-import {Alert} from "antd";
 
 export default function renderSlot() {
   const mdList = {
@@ -35,7 +35,6 @@ export default function renderSlot() {
                 代码样例
             </Anchor>
             <MarkDown url= {mdList.LazyMd}/>
-
 
         </div>
   )
