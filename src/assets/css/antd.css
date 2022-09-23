@@ -10,3 +10,13 @@
 .ant-btn-primary:focus{
     @apply bg-greenD border-greenD text-white
 }
+
+.ant-input {
+    @apply border-green rounded
+
+
+}
+[type='text']:focus{
+    @apply border-green;
+    box-shadow: 0 0 0 2px #cdffde;
+}

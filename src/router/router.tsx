@@ -13,6 +13,7 @@ const SlotName = lazy(() => import('../views/slot-name'))
 const Lazy = lazy(() => import('../views/lazy'))
 const ContextInject = lazy(() => import('../views/context-inject'))
 const RefsDom = lazy(() => import('../views/refs-dom'))
+const AdvanceComp = lazy(() => import('../views/advance-comp'))
 export const routes = [
   {
     path: '/',
@@ -121,9 +122,17 @@ export const routes = [
   {
     path: 'refsDom',
     index: true,
-    element: <RefsDom />,
+    element: <RefsDom/>,
     meta: {
       title: 'Ref 获取组件实例 或 Dom',
+    },
+  },
+  {
+    path: 'advanceComponent',
+    index: true,
+    element: <AdvanceComp />,
+    meta: {
+      title: '高阶组件 HOC',
     },
   },
 

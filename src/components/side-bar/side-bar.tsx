@@ -13,7 +13,7 @@ const barList = [
   { name: '🐶 lazy组件懒加载', path: '/lazy' },
   { name: '🐶 context 跨层级组件props', path: '/context' },
   { name: '🐶 Ref 获取组件实例 或 Dom', path: '/refsDom' },
-  { name: '高阶组件', path: '/advanceComponent' },
+  { name: '🐶 高阶组件 HOC', path: '/advanceComponent' },
   { name: 'Refs 转发', path: '/refsForward' },
   { name: 'Portals 传送渲染', path: '/portals' },
   { name: 'Hooks', path: '/hooks' },
