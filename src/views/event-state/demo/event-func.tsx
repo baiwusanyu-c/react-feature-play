@@ -23,7 +23,7 @@ export default function renderEventFunc() {
 
   return (
         <div>
-            <Button type="primary" className="m-2" onClick={handleClick} shape="round">
+            <Button type="primary" shape="round" className="m-2" onClick={handleClick}>
                 Click me {count.num}
             </Button>
             <Button className="m-2" shape="round">

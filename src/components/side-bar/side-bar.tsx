@@ -14,7 +14,7 @@ const barList = [
   { name: '🐶 context 跨层级组件props', path: '/context' },
   { name: '🐶 Ref 获取组件实例 或 Dom', path: '/refsDom' },
   { name: '🐶 高阶组件 HOC', path: '/advanceComponent' },
-  { name: 'Refs 转发', path: '/refsForward' },
+  { name: '🐶 Refs 转发', path: '/refsForward' },
   { name: 'Portals 传送渲染', path: '/portals' },
   { name: 'Hooks', path: '/hooks' },
   { name: 'State Hook', path: '/stateHooks' },

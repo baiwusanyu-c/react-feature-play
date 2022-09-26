@@ -67,7 +67,7 @@ function enhanceComponent(WrappedComponent: typeof InputComp, option: IInputOpti
 }
 
 const WrappedInput1 = enhanceComponent(InputComp, { name: 'input1', data: 'input1' })
-const WrappedInput2 = enhanceComponent(InputComp, { name: 'input1', data: '' })
+const WrappedInput2 = enhanceComponent(InputComp, { name: 'input2', data: '' })
 
 export default function renderAdvance() {
   const data1 = ' data1'

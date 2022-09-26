@@ -14,6 +14,7 @@ const Lazy = lazy(() => import('../views/lazy'))
 const ContextInject = lazy(() => import('../views/context-inject'))
 const RefsDom = lazy(() => import('../views/refs-dom'))
 const AdvanceComp = lazy(() => import('../views/advance-comp'))
+const RefsForward = lazy(() => import('../views/refs-forward'))
 export const routes = [
   {
     path: '/',
@@ -133,6 +134,14 @@ export const routes = [
     element: <AdvanceComp />,
     meta: {
       title: '高阶组件 HOC',
+    },
+  },
+  {
+    path: 'refsForward',
+    index: true,
+    element: <RefsForward />,
+    meta: {
+      title: 'Refs 转发',
     },
   },
 
