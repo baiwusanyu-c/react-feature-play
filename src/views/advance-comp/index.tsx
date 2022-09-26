@@ -3,7 +3,7 @@ import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
 import AdvanceComp from './demo/advance-comp'
 
-export default function renderFor() {
+export default function renderHOC() {
   const mdList = {
     advanceComp: 'markdown/advance-comp/advance-comp.md',
   }

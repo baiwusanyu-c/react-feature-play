@@ -4,7 +4,7 @@ import ForwardFunc from './demo/forward-func'
 import ForwardClass from './demo/forward-class'
 import ForwardHoc from './demo/forward-hoc'
 
-export default function renderFor() {
+export default function renderRefsForward() {
   const mdList = {
     forwardFunc: 'markdown/refs-forward/forward-func.md',
     forwardClass: 'markdown/refs-forward/forward-class.md',

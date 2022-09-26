@@ -4,7 +4,7 @@ import Anchor from '../../components/anchor/anchor'
 import RefsDomCreate from './demo/refs-dom-creaet'
 import RefsDomCb from './demo/refs-dom-cb'
 
-export default function renderFor() {
+export default function renderRefsDom() {
   const mdList = {
     refsDomCreate: 'markdown/refs-dom/refs-dom-create.md',
     refsDomCb: 'markdown/refs-dom/refs-dom-cb.md',

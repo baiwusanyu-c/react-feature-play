@@ -4,7 +4,7 @@ import Anchor from '../../components/anchor/anchor'
 import CtxParentFunc from './demo/context-parent-func'
 import CtxParentClass from './demo/context-parent-class'
 
-export default function renderFor() {
+export default function renderCtxInject() {
   const mdList = {
     ctxFunc: 'markdown/context/content-func.md',
     ctxClass: 'markdown/context/content-class.md',
