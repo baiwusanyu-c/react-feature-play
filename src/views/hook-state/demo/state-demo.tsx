@@ -1,5 +1,4 @@
 import { Button } from 'antd'
-import type { MouseEvent } from 'react'
 import { useState } from 'react'
 interface IState {
   num: number
