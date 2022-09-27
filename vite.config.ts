@@ -22,7 +22,7 @@ export default defineConfig({
         ],
       },
     }),
-    mkcert(),
+    // mkcert(),
   ],
   server: {
     host: '0.0.0.0',
@@ -31,7 +31,7 @@ export default defineConfig({
     port: 3010,
   },
   build: {
-    minify: false,
+    minify: true,
     cssCodeSplit: true,
   },
 })

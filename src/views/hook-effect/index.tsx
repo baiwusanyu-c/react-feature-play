@@ -1,77 +1,64 @@
-import { Alert } from 'antd'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
-import ForKey from './demo/for-key'
-import ForRender from './demo/for-render'
+import {Alert} from "antd";
 
 export default function renderFor() {
-  const mdList = {
-    forKey: 'markdown/for-render/for-key.md',
-    forRender: 'markdown/for-render/for-render.md',
-  }
-  return (
+    const mdList = {
+        call: 'markdown/hook-effect/call.md',
+        clear: 'markdown/hook-effect/clear.md',
+        use: 'markdown/hook-effect/use.md',
+    }
+    return (
         <div className="props-types">
             <Anchor tagType="h1"
-                    idVal="h1_for"
+                    idVal="h1_effect"
                     className="h1-title">
-                Effect Hook
+                State Hook
             </Anchor>
 
             <hr className="hr-line"/>
             <Anchor tagType="h2"
-                    idVal="h2_map_for"
+                    idVal="h2_effect_base"
                     className="h2-title">
-                基于数组 map 方法的列表循环渲染
+                基本概念
             </Anchor>
             <p className="content-txt">
-                React 的列表渲染也是得益于 jsx 的特性，可以使用 js 数组的 map 方法生成一个 jsx 数组来渲染即可，
-                并且 class 类型组件和函数组件在写法上也没有区别。 区别于 vue 的 v-for 指令，还是 vue 方便多了。
+                Effect Hook 可以让你在函数组件中执行副作用操作,如果你想在 React 更新 DOM 之后运行一些额外的代码，就可以使用 Effect Hook 实现，
+                从效果上它更像 class 类型组件中的 componentDidMount 和 componentDidUpdate，能改在 DOM 初始化完成和更新后被执行。
             </p>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_demo"
-                    className="h3-title">
-                组件渲染样例
-            </Anchor>
-            <ForRender/>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_code"
-                    className="h3-title">
-                组件代码样例
-            </Anchor>
-            <MarkDown url= {mdList.forRender}/>
-
-            <hr className="hr-line"/>
-            <Anchor tagType="h2"
-                    idVal="h2_map_for_key"
-                    className="h2-title">
-                列表循环渲染中的 key
-            </Anchor>
-            <p className="content-txt">
-                和 vue 一样，在列表循环渲染中，需要绑定一个 key 值，
-                使得在虚拟 dom 进行 diff 算法更新时能够更加高效的进行对比查找出更新元素。
-            </p>
-            <div className="my-4">
+            <div className="my-6">
                 <Alert
                     message="Warning"
-                    description="这里够绑定 key 值一定是就近的 map 方法中绑定原则。
-                    例如你在 map 方法中循环了一个组件 itemComp，其渲染的内容是 li 标签，
-                    此时你不可以把 key 设置在 li 标签上（itemComp 组件），而必须把 key 设置在 map 方法循环的 itemComp 上"
+                    description="在默认情况下，Effect Hook 会在每次 DOM 发生变换后执行，此时 React 会清除之前的 effect 自动重新创建一个 effect"
                     type="warning"
                     showIcon
                 />
             </div>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_key_demo"
-                    className="h3-title">
-                组件代码样例
+
+            <MarkDown url= {mdList.use}/>
+            <Anchor tagType="h2"
+                    idVal="h2_effect_clear"
+                    className="h2-title mt-6">
+                Effect 的清除效果
             </Anchor>
-            <ForKey/>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_key_code"
-                    className="h3-title">
-                组件代码样例
+            <p className="content-txt">
+                前面降到效果上它更像 class 类型组件中的 componentDidMount 和 componentDidUpdate，
+                而有时我们可能会在 effect 内做一些需要清除的操作，比如我们编写了一个 setInterval，此时你可能想要在组件卸载时能改清除它，
+                那么可以给 effect 返回一个函数，在函数内编写清除逻辑。
+            </p>
+            <MarkDown url= {mdList.clear}/>
+
+            <Anchor tagType="h2"
+                    idVal="h2_effect_call"
+                    className="h2-title mt-6">
+                Effect 的执行优化
             </Anchor>
-            <MarkDown url= {mdList.forKey}/>
+            <p className="content-txt">
+                在默认情况下，Effect Hook 会在每次 DOM 发生变换后执行，甚至在某些时候组件初始化时，会执行两次（这是我实际体验时发现的问题），
+                所以在每次 DOM 变化，执行所有的 effect 这显然不是一个好的选择。通过给 useEffect 传入第二个参数，可以实现指定变量变化时，再执行
+                effect 的效果
+            </p>
+            <MarkDown url= {mdList.call}/>
         </div>
-  )
+    )
 }

@@ -16,14 +16,15 @@ const barList = [
   { name: '🐶 高阶组件 HOC', path: '/advanceComponent' },
   { name: '🐶 Refs 转发', path: '/refsForward' },
   { name: '🐶 Portals 传送渲染', path: '/portals' },
-  { name: '🚧 State Hook', path: '/stateHooks' },
-  { name: '🚧 Effect Hook', path: '/effectHooks' },
-  { name: '自定义的 Hook', path: '/customHooks' },
-  { name: 'React Router', path: '/ReactRouter' },
-  { name: 'Router 配置', path: '/ReactRouterOption' },
-  { name: 'Router 传参', path: '/ReactRouterQuery' },
-  { name: 'Router 守卫', path: '/ReactRouterGuard' },
-  { name: 'Router 重定向', path: '/ReactRouterRedirect' },
+  { name: '🐶 State Hook', path: '/stateHooks' },
+  { name: '🐶 Effect Hook', path: '/effectHooks' },
+  { name: '🚧 自定义的 Hook', path: '/customHooks' },
+  { name: '🚧 React Router', path: '/ReactRouter' },
+  { name: '🚧 Router 配置', path: '/ReactRouterOption' },
+  { name: '🚧 Router 传参', path: '/ReactRouterQuery' },
+  { name: '🚧 Router 守卫', path: '/ReactRouterGuard' },
+  { name: '🚧 Router 重定向', path: '/ReactRouterRedirect' },
+  { name: '🚧 Redux', path: '/ReactRouterRedirect' },
 
 ]
 
