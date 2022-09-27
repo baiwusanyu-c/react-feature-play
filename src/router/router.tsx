@@ -16,6 +16,8 @@ const RefsDom = lazy(() => import('../views/refs-dom'))
 const AdvanceComp = lazy(() => import('../views/advance-comp'))
 const RefsForward = lazy(() => import('../views/refs-forward'))
 const Portals = lazy(() => import('../views/portals'))
+const HookState = lazy(() => import('../views/hook-state'))
+const HookEffect = lazy(() => import('../views/hook-effect'))
 export const routes = [
   {
     path: '/',
@@ -151,6 +153,22 @@ export const routes = [
     element: <Portals />,
     meta: {
       title: 'Portals 传送渲染',
+    },
+  },
+  {
+    path: 'stateHooks',
+    index: true,
+    element: <HookState />,
+    meta: {
+      title: 'State Hook',
+    },
+  },
+  {
+    path: 'effectHooks',
+    index: true,
+    element: <HookEffect />,
+    meta: {
+      title: 'Effect Hook',
     },
   },
 
