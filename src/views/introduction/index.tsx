@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { Button } from 'antd'
 import reactLogo from '../../assets/svg/react.svg'
-
 export default function renderHome() {
   const [count, setCount] = useState(0)
   return (
@@ -14,9 +14,9 @@ export default function renderHome() {
                 </a>
             </div>
             <div className="card">
-                <button onClick={() => setCount(count => count + 1)}>
+                <Button onClick={() => setCount(count => count + 1)}>
                     count is {count}
-                </button>
+                </Button>
             </div>
         </div>
   )

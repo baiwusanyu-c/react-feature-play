@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 const barList = [
-  { name: '介绍', path: '/home' },
+  { name: '介绍', path: '/introduce' },
   { name: 'props 属性传递', path: '/props' },
   { name: 'PropTypes 的类型检查', path: '/propTypes' },
   { name: '生命周期', path: '/stateLifecycle' },

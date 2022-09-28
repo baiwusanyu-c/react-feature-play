@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
-import Home from '../views/home/home'
+import Home from '../views/home'
+const Introduction = lazy(() => import('../views/introduction'))
 const Props = lazy(() => import('../views/props'))
 const PropTypes = lazy(() => import('../views/prop-types'))
 const RenderProps = lazy(() => import('../views/render-props'))
@@ -32,6 +33,14 @@ export const routes = [
     element: <Home />,
     meta: {
       title: '首页',
+    },
+  },
+  {
+    path: 'introduce',
+    index: true,
+    element: <Introduction />,
+    meta: {
+      title: '介绍',
     },
   },
   {
