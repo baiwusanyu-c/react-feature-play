@@ -18,6 +18,7 @@ const RefsForward = lazy(() => import('../views/refs-forward'))
 const Portals = lazy(() => import('../views/portals'))
 const HookState = lazy(() => import('../views/hook-state'))
 const HookEffect = lazy(() => import('../views/hook-effect'))
+const HookCustom = lazy(() => import('../views/hook-custom'))
 export const routes = [
   {
     path: '/',
@@ -171,7 +172,14 @@ export const routes = [
       title: 'Effect Hook',
     },
   },
-
+  {
+    path: 'customHooks',
+    index: true,
+    element: <HookCustom />,
+    meta: {
+      title: 'Custom Hook',
+    },
+  },
   /* {
         path: '*',
         element: <Page404 />,

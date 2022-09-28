@@ -1,14 +1,14 @@
+import { Alert } from 'antd'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
-import {Alert} from "antd";
 
 export default function renderFor() {
-    const mdList = {
-        call: 'markdown/hook-effect/call.md',
-        clear: 'markdown/hook-effect/clear.md',
-        use: 'markdown/hook-effect/use.md',
-    }
-    return (
+  const mdList = {
+    call: 'markdown/hook-effect/call.md',
+    clear: 'markdown/hook-effect/clear.md',
+    use: 'markdown/hook-effect/use.md',
+  }
+  return (
         <div className="props-types">
             <Anchor tagType="h1"
                     idVal="h1_effect"
@@ -60,5 +60,5 @@ export default function renderFor() {
             </p>
             <MarkDown url= {mdList.call}/>
         </div>
-    )
+  )
 }

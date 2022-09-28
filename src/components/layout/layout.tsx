@@ -7,7 +7,7 @@ function renderLayout() {
   return (
         <div className="w-full h-full">
             <HeaderBar/>
-            <div className="mt-14 flex pb-4">
+            <div className="mt-14 flex pb-4 mx-10rem">
                 <SideBar/>
                 <div className="p-10 box-border w-full h-side overflow-y-auto">
                     {/* 嵌套路由渲染位置 */}
