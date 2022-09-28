@@ -24,7 +24,7 @@ const barList = [
   { name: '🚧 Router 传参', path: '/ReactRouterQuery' },
   { name: '🚧 Router 守卫', path: '/ReactRouterGuard' },
   { name: '🚧 Router 重定向', path: '/ReactRouterRedirect' },
-  { name: '🚧 Redux Toolkit', path: '/redux' },
+  { name: 'Redux Toolkit', path: '/redux' },
 
 ]
 
