@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import mkcert from 'vite-plugin-mkcert'
 import WindiCSS from 'vite-plugin-windicss'
 import { chunkSplitPlugin } from 'vite-plugin-chunk-split'
-// https://vitejs.dev/config/
+import progress from 'vite-plugin-progress'
+import viteCompression from 'vite-plugin-compression'
 export default defineConfig({
   plugins: [
     react(),
@@ -22,7 +22,8 @@ export default defineConfig({
         ],
       },
     }),
-    // mkcert(),
+    progress(),
+    viteCompression(),
   ],
   server: {
     host: '0.0.0.0',
@@ -33,6 +34,13 @@ export default defineConfig({
   build: {
     minify: true,
     cssCodeSplit: true,
+    commonjsOptions: {
+      ignoreTryCatch: false,
+    },
+  },
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment',
   },
 })
 
