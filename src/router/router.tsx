@@ -19,6 +19,7 @@ const Portals = lazy(() => import('../views/portals'))
 const HookState = lazy(() => import('../views/hook-state'))
 const HookEffect = lazy(() => import('../views/hook-effect'))
 const HookCustom = lazy(() => import('../views/hook-custom'))
+const Redux = lazy(() => import('../views/redux'))
 export const routes = [
   {
     path: '/',
@@ -178,6 +179,14 @@ export const routes = [
     element: <HookCustom />,
     meta: {
       title: 'Custom Hook',
+    },
+  },
+  {
+    path: 'redux',
+    index: true,
+    element: <Redux />,
+    meta: {
+      title: 'Redux Toolkit 状态管理',
     },
   },
   /* {
