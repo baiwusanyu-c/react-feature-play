@@ -2,5 +2,3 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npm exec lint-staged --allow-empty
-npm exec lint-staged --allow-empty
-npm exec lint-staged --allow-empty

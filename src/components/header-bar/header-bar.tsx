@@ -1,6 +1,7 @@
 import { GithubOutlined } from '@ant-design/icons'
 import reactLogo from '../../assets/svg/react.svg'
 import packageJson from '../../../package.json'
+import AlgolaSearch from '../search/search'
 export default function renderHeader() {
   return (
         <header className="
@@ -18,7 +19,8 @@ export default function renderHeader() {
             </div>
             <div className="flex w-2/3 justify-end">
                 {/* TODO: algia */}
-                <a className="cursor-pointer mx-4 hover:text-green hover:font-bold" href="#/home" > 首页 </a>
+                <AlgolaSearch />
+                <a className="leading-9 cursor-pointer mx-4 hover:text-green hover:font-bold" href="#/home" > 首页 </a>
                 <a className="cursor-pointer mx-4 hover:text-green hover:font-bold"
                    href={packageJson.homepage}
                    target="_blank" rel="noreferrer">
