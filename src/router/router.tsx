@@ -26,6 +26,9 @@ const HookEffect = lazy(() => import('../views/hook-effect'))
 const HookCustom = lazy(() => import('../views/hook-custom'))
 const Redux = lazy(() => import('../views/redux'))
 const ReactRouterOption = lazy(() => import('../views/react-router-option'))
+const ReactRouterParams = lazy(() => import('../views/react-router-params'))
+const ReactRouterGuide = lazy(() => import('../views/react-router-guide'))
+const ReactRouterRedirect = lazy(() => import('../views/react-router-redirect'))
 export const routes = [
   {
     path: '/',
@@ -210,6 +213,30 @@ export const routes = [
     element: <ReactRouterOption />,
     meta: {
       title: 'Router 配置及常用 Api',
+    },
+  },
+  {
+    path: 'ReactRouterRedirect',
+    index: true,
+    element: <ReactRouterRedirect />,
+    meta: {
+      title: 'Router 重定向',
+    },
+  },
+  {
+    path: 'ReactRouterGuard',
+    index: true,
+    element: <ReactRouterGuide />,
+    meta: {
+      title: 'Router 守卫',
+    },
+  },
+  {
+    path: 'ReactRouterQuery',
+    index: true,
+    element: <ReactRouterParams />,
+    meta: {
+      title: 'Router 传参',
     },
   },
   /* {
