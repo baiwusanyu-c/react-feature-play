@@ -55,13 +55,13 @@ export default function renderFor() {
                 需要用原对象的其他字段进行结构赋值，否则仅仅传入你需要更新的字段，会导致其他字段失效
             </p>
             <MarkDown url= {mdList.update}/>
-            <Anchor tagType="h2"
+            <Anchor tagType="h3"
                     idVal="h3_state_md"
                     className="h3-title">
                 组件渲染样例
             </Anchor>
             <StateDemo />
-            <Anchor tagType="h2"
+            <Anchor tagType="h3"
                     idVal="h3_state_code"
                     className="h3-title">
                 组件代码样例

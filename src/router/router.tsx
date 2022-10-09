@@ -1,5 +1,9 @@
 import { lazy } from 'react'
-import { Navigate, useRoutes } from 'react-router-dom'
+import {
+  Navigate,
+  useRoutes,
+  // createHashRouter,
+} from 'react-router-dom'
 import Home from '../views/home'
 const Introduction = lazy(() => import('../views/introduction'))
 const Props = lazy(() => import('../views/props'))
@@ -21,6 +25,7 @@ const HookState = lazy(() => import('../views/hook-state'))
 const HookEffect = lazy(() => import('../views/hook-effect'))
 const HookCustom = lazy(() => import('../views/hook-custom'))
 const Redux = lazy(() => import('../views/redux'))
+const ReactRouterOption = lazy(() => import('../views/react-router-option'))
 export const routes = [
   {
     path: '/',
@@ -31,6 +36,7 @@ export const routes = [
     path: 'home',
     index: true,
     element: <Home />,
+    id: 'home',
     meta: {
       title: '首页',
     },
@@ -121,7 +127,7 @@ export const routes = [
     index: true,
     element: <Lazy />,
     meta: {
-      title: 'lazy组件懒加载',
+      title: 'lazy 组件懒加载',
     },
   },
 
@@ -147,7 +153,7 @@ export const routes = [
     index: true,
     element: <AdvanceComp />,
     meta: {
-      title: '高阶组件 HOC',
+      title: 'HOC 高阶组件',
     },
   },
   {
@@ -198,6 +204,14 @@ export const routes = [
       title: 'Redux Toolkit 状态管理',
     },
   },
+  {
+    path: 'ReactRouterOption',
+    index: true,
+    element: <ReactRouterOption />,
+    meta: {
+      title: 'Router 配置及常用 Api',
+    },
+  },
   /* {
         path: '*',
         element: <Page404 />,
@@ -211,5 +225,6 @@ export const routes = [
 
 const Routes = () => (
   useRoutes(routes)
+  //  createHashRouter(routes)
 )
 export default Routes

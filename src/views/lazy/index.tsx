@@ -11,7 +11,7 @@ export default function renderSlot() {
             <Anchor tagType="h1"
                     idVal="h1_slot"
                     className="h1-title">
-                lazy组件懒加载
+                lazy 组件懒加载
             </Anchor>
 
             <hr className="hr-line"/>

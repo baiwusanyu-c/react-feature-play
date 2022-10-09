@@ -28,13 +28,13 @@ export default function renderFor() {
                 自定义 Hook，其实本质是一个函数，其参数、返回值完全由你定义，在使用和声明上遵循 Hook 规则，其中最重要的就是保证在函数组件
                 顶层调用。
             </p>
-            <Anchor tagType="h2"
+            <Anchor tagType="h3"
                     idVal="h3_state_md"
                     className="h3-title">
                 组件渲染样例
             </Anchor>
             <CustomHook />
-            <Anchor tagType="h2"
+            <Anchor tagType="h3"
                     idVal="h3_state_code"
                     className="h3-title">
                 组件代码样例

@@ -12,7 +12,7 @@ export default function renderHOC() {
             <Anchor tagType="h1"
                     idVal="h1_hoc"
                     className="h1-title">
-                高阶组件 HOC
+                HOC 高阶组件
             </Anchor>
 
             <hr className="hr-line"/>
@@ -38,7 +38,7 @@ export default function renderHOC() {
             <Anchor tagType="h2"
                     idVal="h2_hoc_g"
                     className="h2-title">
-                高阶组件 HOC 的规范约定
+                HOC 高阶组件 的规范约定
             </Anchor>
             <Anchor tagType="h3"
                     idVal="h3_hoc_oc"
