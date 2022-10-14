@@ -1,14 +1,14 @@
-import { Alert } from 'antd'
+import { useLocation } from 'react-router-dom'
 import MarkDown from '../../components/markdown/markdown'
 import Anchor from '../../components/anchor/anchor'
-import ForKey from './demo/for-key'
-import ForRender from './demo/for-render'
-
 export default function renderFor() {
   const mdList = {
-    forKey: 'markdown/for-render/for-key.md',
-    forRender: 'markdown/for-render/for-render.md',
+    params: 'markdown/react-router-params/react-router-params.md',
+    search: 'markdown/react-router-params/react-router-search.md',
+    state: 'markdown/react-router-params/react-router-state.md',
   }
+  const { state } = useLocation()
+  console.log(state)
   return (
         <div className="props-types">
             <Anchor tagType="h1"
@@ -21,57 +21,58 @@ export default function renderFor() {
             <Anchor tagType="h2"
                     idVal="h2_map_for"
                     className="h2-title">
-                基于数组 map 方法的列表循环渲染
+                基于 params 传参
             </Anchor>
             <p className="content-txt">
-                React 的列表渲染也是得益于 jsx 的特性，可以使用 js 数组的 map 方法生成一个 jsx 数组来渲染即可，
-                并且 class 类型组件和函数组件在写法上也没有区别。 区别于 vue 的 v-for 指令，还是 vue 方便多了。
+               在 react-router-dom 中和 vue 一样包含有三种留有传参方式，其中一种是 params 传参。
+               这是一种拼接在 url 后面，使用子路径和冒号来标识并被识别的参数传递方式，他可以通过 hooks 的 useParams 来获取。
+               它将暴露在 url 上，切刷新不会丢失。对应的 vue-router 其实就是他的动态路由匹配
             </p>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_demo"
-                    className="h3-title">
-                组件渲染样例
-            </Anchor>
-            <ForRender/>
+            {/* TODO CODE */}
             <Anchor tagType="h3"
                     idVal="h3_map_for_code"
                     className="h3-title">
                 组件代码样例
             </Anchor>
-            <MarkDown url= {mdList.forRender}/>
+            <MarkDown url= {mdList.params}/>
 
-            <hr className="hr-line"/>
-            <Anchor tagType="h2"
-                    idVal="h2_map_for_key"
-                    className="h2-title">
-                列表循环渲染中的 key
-            </Anchor>
-            <p className="content-txt">
-                和 vue 一样，在列表循环渲染中，需要绑定一个 key 值，
-                使得在虚拟 dom 进行 diff 算法更新时能够更加高效的进行对比查找出更新元素。
-            </p>
-            <div className="my-4">
-                <Alert
-                    message="Warning"
-                    description="这里够绑定 key 值一定是就近的 map 方法中绑定原则。
-                    例如你在 map 方法中循环了一个组件 itemComp，其渲染的内容是 li 标签，
-                    此时你不可以把 key 设置在 li 标签上（itemComp 组件），而必须把 key 设置在 map 方法循环的 itemComp 上"
-                    type="warning"
-                    showIcon
-                />
-            </div>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_key_demo"
-                    className="h3-title">
-                组件代码样例
-            </Anchor>
-            <ForKey/>
-            <Anchor tagType="h3"
-                    idVal="h3_map_for_key_code"
-                    className="h3-title">
-                组件代码样例
-            </Anchor>
-            <MarkDown url= {mdList.forKey}/>
+          <hr className="hr-line"/>
+          <Anchor tagType="h2"
+                  idVal="h2_map_for"
+                  className="h2-title">
+            基于 search 的传参
+          </Anchor>
+          <p className="content-txt">
+            在 react-router-dom 中和 vue 一样包含有三种留有传参方式，其中一种是 search 传参。
+            这是一种拼接在 url 后面，使用 get 请求参数方式为格式的一种传参方式，他可以通过 hooks 的 useSearchParams 或 useLocation 来获取。
+            它将暴露在 url 上，切刷新不会丢失。对应的 vue-router 其实就是它的 query 传参
+          </p>
+          {/* TODO CODE */}
+          <Anchor tagType="h3"
+                  idVal="h3_map_for_code"
+                  className="h3-title">
+            组件代码样例
+          </Anchor>
+          <MarkDown url= {mdList.search}/>
+
+          <hr className="hr-line"/>
+          <Anchor tagType="h2"
+                  idVal="h2_map_for"
+                  className="h2-title">
+            基于 state 的传参
+          </Anchor>
+          <p className="content-txt">
+            在 react-router-dom 中和 vue 一样包含有三种留有传参方式，其中一种是 state 传参。
+            state 是路由暴露的配置对象，能够实现一些数据共享。他可以通过 hooks 的 useLocation 来获取。
+            它不会暴露在 url 上，切刷新不会丢失。它类似于 vue-router 的路由 props 传参
+          </p>
+          {/* TODO CODE */}
+          <Anchor tagType="h3"
+                  idVal="h3_map_for_code"
+                  className="h3-title">
+            组件代码样例
+          </Anchor>
+          <MarkDown url= {mdList.state}/>
         </div>
   )
 }
