@@ -5,7 +5,7 @@ import {
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './assets/css/index.css'
-import 'antd/dist/antd.css'
+import 'antd/dist/reset.css'
 import 'virtual:windi.css'
 import './assets/css/antd.css'
 // import RoutesList from './router/router'
